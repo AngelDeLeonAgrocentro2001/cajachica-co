@@ -13,7 +13,7 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #1a4d3e 0%, #2d6a4f 50%, #1a4d3e 100%);
+            background: linear-gradient(135deg, #003893 0%, #0051ba 50%, #003893 100%);
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -29,7 +29,7 @@
             content: '';
             position: absolute;
             border-radius: 50%;
-            background: rgba(255, 255, 255, 0.03);
+            background: rgba(255, 205, 0, 0.05);
         }
 
         body::before {
@@ -62,7 +62,7 @@
         /* Panel izquierdo decorativo */
         .left-panel {
             flex: 1;
-            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            background: linear-gradient(135deg, #FFF9E6 0%, #FFE680 100%);
             padding: 40px;
             position: relative;
             overflow: hidden;
@@ -82,7 +82,7 @@
         .logo-icon {
             width: 50px;
             height: 50px;
-            background: #2d6a4f;
+            background: linear-gradient(135deg, #FFCD00 0%, #003893 50%, #CE1126 100%);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -94,7 +94,7 @@
 
         .logo-text {
             font-size: 14px;
-            color: #2d6a4f;
+            color: #003893;
             font-weight: 600;
         }
 
@@ -110,7 +110,7 @@
         .tree-container {
             width: 250px;
             height: 250px;
-            background: rgba(174, 213, 183, 0.4);
+            background: rgba(255, 205, 0, 0.2);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -118,34 +118,15 @@
             position: relative;
         }
 
-        .tree {
-            width: 0;
-            height: 0;
-            border-left: 50px solid transparent;
-            border-right: 50px solid transparent;
-            border-bottom: 120px solid #2d6a4f;
-            position: relative;
-        }
-
-        .tree::before {
-            content: '';
-            position: absolute;
-            width: 20px;
-            height: 40px;
-            background: #6b4423;
-            bottom: -160px;
-            left: -10px;
-        }
-
         /* Círculos decorativos */
         .circle {
             position: absolute;
             border-radius: 50%;
-            background: rgba(255, 255, 255, 0.3);
+            background: rgba(206, 17, 38, 0.1);
         }
 
         .circle1 { width: 80px; height: 80px; top: 50px; left: 30px; }
-        .circle2 { width: 60px; height: 60px; bottom: 100px; right: 40px; }
+        .circle2 { width: 60px; height: 60px; bottom: 100px; right: 40px; background: rgba(0, 56, 147, 0.1); }
         .circle3 { width: 100px; height: 100px; top: 200px; right: 20px; opacity: 0.2; }
 
         .footer-text {
@@ -159,7 +140,7 @@
         /* Panel derecho - Formulario */
         .right-panel {
             flex: 1;
-            background: #2d6a4f;
+            background: linear-gradient(180deg, #FFCD00 0%, #FFCD00 50%, #003893 50%, #003893 75%, #CE1126 75%, #CE1126 100%);
             padding: 60px 50px;
             display: flex;
             flex-direction: column;
@@ -167,10 +148,23 @@
             position: relative;
         }
 
+        .right-panel::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 56, 147, 0.95);
+            z-index: 0;
+        }
+
         .login-form {
             width: 100%;
             max-width: 350px;
             margin: 0 auto;
+            position: relative;
+            z-index: 1;
         }
 
         h2 {
@@ -186,7 +180,7 @@
 
         label {
             display: block;
-            color: #c8e6c9;
+            color: #FFCD00;
             font-size: 14px;
             margin-bottom: 8px;
             font-weight: 500;
@@ -197,7 +191,7 @@
             width: 100%;
             padding: 14px 16px;
             background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 205, 0, 0.3);
             border-radius: 8px;
             color: white;
             font-size: 15px;
@@ -213,7 +207,7 @@
         input[type="password"]:focus {
             outline: none;
             background: rgba(255, 255, 255, 0.15);
-            border-color: rgba(255, 255, 255, 0.4);
+            border-color: #FFCD00;
         }
 
         .forgot-password {
@@ -223,34 +217,34 @@
         }
 
         .forgot-password a {
-            color: #a8d5ba;
+            color: #FFE680;
             font-size: 13px;
             text-decoration: none;
             transition: color 0.3s ease;
         }
 
         .forgot-password a:hover {
-            color: #c8e6c9;
+            color: #FFCD00;
             text-decoration: underline;
         }
 
         button[type="submit"] {
             width: 100%;
             padding: 14px;
-            background: linear-gradient(135deg, #52b788 0%, #40916c 100%);
-            color: white;
+            background: linear-gradient(135deg, #FFCD00 0%, #FFA500 100%);
+            color: #003893;
             border: none;
             border-radius: 8px;
             font-size: 16px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(82, 183, 136, 0.3);
+            box-shadow: 0 4px 15px rgba(255, 205, 0, 0.3);
         }
 
         button[type="submit"]:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(82, 183, 136, 0.4);
+            box-shadow: 0 6px 20px rgba(255, 205, 0, 0.5);
         }
 
         button[type="submit"]:active {
@@ -260,12 +254,12 @@
         .register-link {
             text-align: center;
             margin-top: 25px;
-            color: #a8d5ba;
+            color: #FFE680;
             font-size: 14px;
         }
 
         .register-link a {
-            color: #c8e6c9;
+            color: #FFCD00;
             text-decoration: none;
             font-weight: 600;
             transition: color 0.3s ease;
@@ -282,6 +276,7 @@
             right: 50px;
             font-size: 11px;
             color: rgba(255, 255, 255, 0.4);
+            z-index: 1;
         }
 
         .bottom-footer a {
@@ -290,7 +285,7 @@
         }
 
         .error {
-            background: rgba(231, 76, 60, 0.2);
+            background: rgba(206, 17, 38, 0.2);
             color: #ff6b6b;
             padding: 10px;
             border-radius: 6px;
