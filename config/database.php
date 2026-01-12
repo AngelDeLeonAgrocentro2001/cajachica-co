@@ -2,7 +2,7 @@
 define('DB_HOST', '127.0.0.1');
 define('DB_USER', 'root');
 define('DB_PASS', '');
-define('DB_NAME', 'cajas_chicas');
+define('DB_NAME', 'cajas_chicas_co');
 
 class Database {
     private static $instance = null;
